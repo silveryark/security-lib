@@ -13,6 +13,6 @@ public class JwtAuthenticationFilter extends AuthenticationWebFilter {
                                    JwtAuthenticationConverter converter) {
         super(authenticationManager);
         //从exchange里抽取authentication数据
-        setAuthenticationConverter(converter);
+        super.setAuthenticationConverter(converter);
     }
 }

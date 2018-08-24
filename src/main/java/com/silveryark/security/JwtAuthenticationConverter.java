@@ -17,8 +17,7 @@ import java.util.function.Function;
 @Component
 public class JwtAuthenticationConverter implements Function<ServerWebExchange, Mono<Authentication>> {
 
-    private static final String BEARER = "Bearer";
-    final JwtSecurityService securityService;
+    private final JwtSecurityService securityService;
 
     @Autowired
     public JwtAuthenticationConverter(JwtSecurityService securityService) {
